@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.article_item.view.*
  */
 class ArticleAdapter : BaseAdapter<Article, ArticleItemBinding>(R.layout.article_item) {
 
-    override fun onBindViewHolder(holder: Holder<ArticleItemBinding>, position: Int) {
+    override fun onBindViewHolder(holder: Companion.Holder<ArticleItemBinding>, position: Int) {
         super.onBindViewHolder(holder, position)
         val article = getItem(position)
         holder.itemView.tv_author.visibleElseGone(!article.author.isNullOrEmpty())

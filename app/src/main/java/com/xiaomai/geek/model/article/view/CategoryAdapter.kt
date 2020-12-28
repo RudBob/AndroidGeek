@@ -18,7 +18,7 @@ class CategoryAdapter : BaseAdapter<Category, ArticleCategoryItemBinding>(R.layo
         ColorGenerator.MATERIAL
     }
 
-    override fun onBindViewHolder(holder: Holder<ArticleCategoryItemBinding>, position: Int) {
+    override fun onBindViewHolder(holder: Companion.Holder<ArticleCategoryItemBinding>, position: Int) {
         super.onBindViewHolder(holder, position)
         val item = getItem(position)
         holder.itemView.findViewById<TextView>(R.id.tv_name).setBackgroundColor(colorGenerator.getColor(item.name))

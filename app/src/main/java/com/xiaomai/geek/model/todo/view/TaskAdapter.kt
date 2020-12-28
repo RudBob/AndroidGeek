@@ -26,7 +26,7 @@ class TaskAdapter : BaseAdapter<Task, TaskItemBinding>(R.layout.task_item) {
 
     lateinit var callback: Callback
 
-    override fun onBindViewHolder(holder: Holder<TaskItemBinding>, position: Int) {
+    override fun onBindViewHolder(holder: Companion.Holder<TaskItemBinding>, position: Int) {
         super.onBindViewHolder(holder, position)
 
         val task = getItem(position)

@@ -6,7 +6,6 @@ import android.support.annotation.LayoutRes
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.xiaomai.geek.BR
 
 /**
  * Created by wangce on 2018/1/30.
@@ -38,7 +37,7 @@ abstract class BaseAdapter<V, B : ViewDataBinding>(@LayoutRes private val layout
         class Holder<B : ViewDataBinding>(private val binding: B) : RecyclerView.ViewHolder(binding.root) {
             fun <V> binding(value: V?) {
                 value?.let {
-                    binding.setVariable(BR.value, it)
+                    binding.setVariable(1, it)
                     binding.executePendingBindings()
                 }
             }
